@@ -18,6 +18,11 @@ const Items = [
         title: "Clicker",
         image: "https://www.technewstoday.com/wp-content/uploads/2021/07/Best-Games-Like-Cookie-Clicker.jpg",
     },
+
+    {
+        title: "BlackJack",
+        image: "https://www.soydemadrid.com/images/thumbs/el-blackjack-es-de-los-juegos-de-cartas-mas-import-0086683_1200.jpeg",
+    },
 ];
 
 export default Items;

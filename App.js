@@ -10,6 +10,7 @@ import GamesScreen from './GamesScreen';
 import GuessYourNumber from './GuessYourNumber';
 import JanKenPon from './JanKenPon';
 import Clicker from './Clicker';
+import BlackJack from './BlackJack';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -49,6 +50,7 @@ export default function App() {
         <Stack.Screen name="Guess Your Number" component={GuessYourNumber} />
         <Stack.Screen name="Jan Ken Pon" component={JanKenPon} />
         <Stack.Screen name="Clicker" component={Clicker} />
+        <Stack.Screen name="BlackJack" component={BlackJack} />
       </Stack.Navigator>
     </NavigationContainer>
   );
