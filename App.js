@@ -1,17 +1,21 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
-import GamesScreen from './GamesScreen'
+import GuessMyNumber from './GuessMyNumber';
+import GamesScreen from './GamesScreen';
+import GuessYourNumber from './GuessYourNumber';
+import JanKenPon from './JanKenPon';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+function Root() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
+    <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -32,6 +36,18 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Games" component={GamesScreen} />
       </Tab.Navigator>
+  )
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Root" component={Root} options={{headerShown: false}} />
+        <Stack.Screen name="Guess My Number" component={GuessMyNumber} />
+        <Stack.Screen name="Guess Your Number" component={GuessYourNumber} />
+        <Stack.Screen name="Jan Ken Pon" component={JanKenPon} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

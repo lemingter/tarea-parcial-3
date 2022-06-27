@@ -9,11 +9,12 @@ function Box({title, image}) {
     return (
         <View style={styles.box}>
             <Image source={{uri: image}}
-                style={{width: 158, height: 100, borderTopLeftRadius: 15, borderTopRightRadius: 15,}} />
+                style={{width: 158, height: 100, borderTopLeftRadius: 15, borderTopRightRadius: 15,}} 
+            />
 
             <Text style={styles.boxText}>-Title: {title}</Text>
             <Button
-                title="Detalle" 
+                title="Jugar" 
                 style={{paddingBottom: 3,}}
                 onPress={() => navigation.navigate('Details', {
                     image: image,
