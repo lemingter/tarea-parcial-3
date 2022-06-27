@@ -12,14 +12,11 @@ function Box({title, image}) {
                 style={{width: 158, height: 100, borderTopLeftRadius: 15, borderTopRightRadius: 15,}} 
             />
 
-            <Text style={styles.boxText}>-Title: {title}</Text>
+            <Text style={styles.boxText}>{title}</Text>
             <Button
                 title="Jugar" 
                 style={{paddingBottom: 3,}}
-                onPress={() => navigation.navigate('Details', {
-                    image: image,
-                    title: title,
-            })}/> 
+                onPress={() => navigation.navigate(title)}/> 
         </View>
     );
 }
@@ -38,7 +35,6 @@ const styles = StyleSheet.create({
     boxText: {
         color: "darkslategray",
         fontWeight: "bold",
-        alignSelf: "flex-start",
         padding: 8,
     },
 })
